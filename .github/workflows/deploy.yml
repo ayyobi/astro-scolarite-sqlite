@@ -25,6 +25,7 @@ jobs:
 
           script: |
             set -e
+            export PATH="/home/etudiant/.bun/bin:$PATH"
 
             echo "======================================"
             echo "Début du déploiement"
@@ -34,7 +35,7 @@ jobs:
 
             echo "Mise à jour du code..."
             git pull origin
-            
+
             echo "Installation des dépendances..."
             bun ci
 
